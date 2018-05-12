@@ -1,0 +1,84 @@
+.control-time-wrap {
+    height: 100px;
+}
+
+#control-time {
+    height: 30px;
+    width: 100%;
+    background-color: #FF00FF;
+    position: relative;
+    border-radius: 5px;
+}
+
+.control-timer-wrap {
+}
+
+#control-bar {
+    height: 30px;
+    width: 1px;
+    background-color: #0F0;
+    bottom: 0;
+    position: absolute;
+    transition-property: width;
+    transition-function: linear;
+    transition-duration: 0.03s;
+    border-radius: 5px;
+}
+
+#control-percent {
+    text-align: right;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+    padding-right: 7px;
+}
+
+#control-bar.unusable {
+    background-color: #F00;
+}
+
+
+#videowrap {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: #dabdab;
+}
+
+#video {
+    height: 100%;
+    width: 100%;
+}
+
+body, html {
+    margin: 0;
+}
+
+.rotate {
+    animation: rotate 0.1s infinite linear;
+}
+
+.loading-spinner {
+    height: 100%;
+    width: 100%;
+}
+.loading-wrapper {
+    height: 25%;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+}
+
+@keyframes rotate {
+    0% {
+	transform: rotate(0deg);
+    }
+
+    100% {
+	transform: rotate(360deg);
+    }
+}

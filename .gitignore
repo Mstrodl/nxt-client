@@ -1,0 +1,8 @@
+.cache
+dist
+.tern-port
+config.json
+README.html
+*~
+\#*\#
+node_modules
