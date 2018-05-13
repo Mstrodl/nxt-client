@@ -17,8 +17,13 @@ class Client extends EventEmitter {
     this.handlers = {
       hello: this._handleHello,
       stateUpdate: this._handleStateChange,
-      timeUpdate: this._handleTimeUpdate
+      timeUpdate: this._handleTimeUpdate,
+      frame: this._handleFrame
     };
+  }
+
+  _handleFrame(data) {
+    this.emit("frame", data.stream);
   }
 
   _handleTimeUpdate(data) {

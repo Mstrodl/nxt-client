@@ -18,10 +18,14 @@ window.addEventListener("load", async function() {
   console.log("audio!");
   audio.autoplay = true;
   audio.play();
-  video.src = client.stream + "?_=" + new Date().getTime(); // Avoid CF caching on this one
+  video.src = client.stream;
   setInterval(() => {
     renderControlTime();
   }, 30); // Every 30 ms, we render the the time remaining in the bar
+
+  client.on("frame", function(stream) {
+    video.src = stream;
+  });
 
   const directionKeyMap = {
     forward: ["w", "ArrowUp"],
