@@ -1,7 +1,7 @@
 import Client from "./Client.js";
 import "babel-polyfill";
 const client = new Client({
-  endpoint: "ws://localhost:3000" // "wss://vrrr.strodl.co/ws"
+  endpoint: "wss://vrrr.strodl.co/ws"
 });
 window.client = client;
 const loginPromise = client.login();
