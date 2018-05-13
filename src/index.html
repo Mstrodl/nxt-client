@@ -1,10 +1,15 @@
 <html>
   <head>
     <script src="./index.js"></script>
-    <link rel="stylesheet" href="./controls.css"></link>
+    <link rel="stylesheet" href="./controls.css"></link> 
   </head>
   <body>
-    <div id="videowrap">
+    <div id="videowrap" class="errored">
+      <img id="video">
+      <div class="explain">
+	<h1>Oopsie Woopsie!</h1>
+	The stweam did a fucky wucky uwu, ouw cwones of Mawy awe woking vEWY hawd to get a better wifi signaw!!!!
+      </div>
     </div>
     <!-- TODO: Support mobile with buttons or something like that -->
     <div class="control-timer-wrap">
@@ -14,8 +19,20 @@
 	</div>
       </div>
     </div>
+    <div class="controls">
+      <span id="left">left</span>
+      <span class="control-group">
+	<span id="up">up</span>
+	<br>
+	<span id="down">down</span>
+      </span>
+      <span id="right">right</span>
+    </div>
     <div class="explanation">
-      hi you can explore because i am the queen of horrible ideas. use wasd or the arrow keys. please dont break the motors or something thanks.
+      This is a remote controllable robot that I made because I have too much free time (much to the dismay of my peers)<br>
+      Use WASD, the arrow keys, or the buttons above to control it<br>
+      The percentage bar above shows how much time you have to control the robot in order to prevent someone from hogging it the whole time.<br>
+      When you have less than 1 second (~10%) left to control it, your time will be unusable.
     </div>
   </body>
 </html>

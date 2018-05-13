@@ -1,22 +1,25 @@
-.control-time-wrap {
-    height: 100px;
+body, html {
+    background-color: #2c2f33;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.control-timer-wrap {
+    margin: 5px 15px;
 }
 
 #control-time {
     height: 30px;
-    width: 100%;
-    background-color: #FF00FF;
+    /* width: 100%; */
+    background-color: rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 5px;
-}
-
-.control-timer-wrap {
 }
 
 #control-bar {
     height: 30px;
     width: 1px;
-    background-color: #0F0;
+    background-color: #067733;
     bottom: 0;
     position: absolute;
     transition-property: width;
@@ -34,7 +37,7 @@
 }
 
 #control-bar.unusable {
-    background-color: #F00;
+    background-color: #d63131;
 }
 
 
@@ -42,12 +45,73 @@
     position: relative;
     height: 80vh;
     width: 100%;
-    background: #dabdab;
+}
+
+#videowrap.errored #video {
+    display: none;
+}
+
+#videowrap .explain {
+    display: none;
+}
+
+.explanation {
+    height: calc(100vh - 80vh - 30px - 10px);
+    text-align: center;
+    overflow: auto;
+}
+
+.controls {
+    position: relative;
+    display: block;
+}
+
+#left, #right {
+    bottom: 0;
+    position: absolute;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+.controls {
+    height: 2.5em;
+    margin: 5px 15px;
+    widht: 100%;
+}
+
+.control-group {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    text-align: center;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+#videowrap.errored .explain {
+    font-size: 1.5em;
+    display: inline-block;
+    height: 20%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    text-align: center;
 }
 
 #video {
     height: 100%;
     width: 100%;
+    border: 0;
     object-fit: contain;
 }
 
