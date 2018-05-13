@@ -1,7 +1,10 @@
 import Client from "./Client.js";
 import "babel-polyfill";
 const client = new Client({
-  endpoint: "wss://vrrr.strodl.co/ws"
+  endpoint:
+    window.location.hostname == "localhost"
+      ? "ws://localhost:3000"
+      : "wss://vrrr.strodl.co/ws"
 });
 window.client = client;
 const loginPromise = client.login();
@@ -54,7 +57,9 @@ window.addEventListener("load", async function() {
     forward: ["w", "ArrowUp", "ELEM#up"],
     backward: ["s", "ArrowDown", "ELEM#down"],
     left: ["a", "ArrowLeft", "ELEM#left"],
-    right: ["d", "ArrowRight", "ELEM#right"]
+    right: ["d", "ArrowRight", "ELEM#right"],
+    cameraLeft: ["q", "ELEM#camleft"],
+    cameraRight: ["e", "ELEM#camright"]
   };
   let downDirection = null;
   document.addEventListener(
