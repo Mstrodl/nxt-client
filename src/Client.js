@@ -48,6 +48,7 @@ maxTime: 10000
     this.minTime = data.minTime;
     this.regenRate = data.regenRate;
     this.stream = data.streamURI;
+    this.audioStream = data.audio;
     this.myDirection = data.motor.me ? data.motor.direction : null;
     this.myDirectionSince = data.motor.me
       ? new Date().getTime() - data.motor.since // It sends a relative time in case our clocks aren't synced (TODO: make the rest of them relative...)

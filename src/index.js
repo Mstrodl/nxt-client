@@ -14,15 +14,14 @@ window.addEventListener("load", async function() {
   videowrap.appendChild(video);
   console.log("loaded");
   await loginPromise;
+  const audio = new Audio(client.audioStream + "?_=" + new Date().getTime());
+  console.log("audio!");
+  audio.autoplay = true;
+  audio.play();
   video.src = client.stream + "?_=" + new Date().getTime(); // Avoid CF caching on this one
   setInterval(() => {
     renderControlTime();
-    // renderControls();
-  }, 30); // Every one millisecond, we render the controls and the time remaining in the bar
-  // const forward = document.getElementById("control-forward");
-  // const backward = document.getElementById("control-forward");
-  // const left = document.getElementById("control-left");
-  // const right = document.getElementById("control-right");
+  }, 30); // Every 30 ms, we render the the time remaining in the bar
 
   const directionKeyMap = {
     forward: ["w", "ArrowUp"],
