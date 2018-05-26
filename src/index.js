@@ -59,7 +59,8 @@ window.addEventListener("load", async function() {
     left: ["a", "ArrowLeft", "ELEM#left"],
     right: ["d", "ArrowRight", "ELEM#right"],
     cameraLeft: ["q", "ELEM#camleft"],
-    cameraRight: ["e", "ELEM#camright"]
+    cameraRight: ["e", "ELEM#camright"],
+    poke: ["f", "ELEM#poke"]
   };
   let downDirection = null;
   document.addEventListener(
